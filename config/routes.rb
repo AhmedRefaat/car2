@@ -1,4 +1,6 @@
 Ccar::Application.routes.draw do
+  resources :ocars
+
   resources :ncars
 
   # The priority is based upon order of creation:

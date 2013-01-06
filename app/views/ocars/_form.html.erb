@@ -1,0 +1,65 @@
+<%= form_for(@ocar) do |f| %>
+  <% if @ocar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ocar.errors.count, "error") %> prohibited this ocar from being saved:</h2>
+
+      <ul>
+      <% @ocar.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :oem %><br />
+    <%= f.text_field :oem %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br />
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :transmission %><br />
+    <%= f.text_field :transmission %>
+  </div>
+  <div class="field">
+    <%= f.label :drive_type %><br />
+    <%= f.text_field :drive_type %>
+  </div>
+  <div class="field">
+    <%= f.label :engine_size %><br />
+    <%= f.text_field :engine_size %>
+  </div>
+  <div class="field">
+    <%= f.label :seat_material %><br />
+    <%= f.text_field :seat_material %>
+  </div>
+  <div class="field">
+    <%= f.label :performance %><br />
+    <%= f.number_field :performance %>
+  </div>
+  <div class="field">
+    <%= f.label :gearbox %><br />
+    <%= f.number_field :gearbox %>
+  </div>
+  <div class="field">
+    <%= f.label :body_style %><br />
+    <%= f.text_field :body_style %>
+  </div>
+  <div class="field">
+    <%= f.label :owner %><br />
+    <%= f.text_field :owner %>
+  </div>
+  <div class="field">
+    <%= f.label :telephone %><br />
+    <%= f.text_field :telephone %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url %><br />
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

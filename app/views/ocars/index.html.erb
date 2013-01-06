@@ -1,0 +1,45 @@
+<h1>Listing ocars</h1>
+
+<table>
+  <tr>
+    <th>Oem</th>
+    <th>Model</th>
+    <th>Transmission</th>
+    <th>Drive type</th>
+    <th>Engine size</th>
+    <th>Seat material</th>
+    <th>Performance</th>
+    <th>Gearbox</th>
+    <th>Body style</th>
+    <th>Owner</th>
+    <th>Telephone</th>
+    <th>Image url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ocars.each do |ocar| %>
+  <tr>
+    <td><%= ocar.oem %></td>
+    <td><%= ocar.model %></td>
+    <td><%= ocar.transmission %></td>
+    <td><%= ocar.drive_type %></td>
+    <td><%= ocar.engine_size %></td>
+    <td><%= ocar.seat_material %></td>
+    <td><%= ocar.performance %></td>
+    <td><%= ocar.gearbox %></td>
+    <td><%= ocar.body_style %></td>
+    <td><%= ocar.owner %></td>
+    <td><%= ocar.telephone %></td>
+    <td><%= ocar.image_url %></td>
+    <td><%= link_to 'Show', ocar %></td>
+    <td><%= link_to 'Edit', edit_ocar_path(ocar) %></td>
+    <td><%= link_to 'Destroy', ocar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ocar', new_ocar_path %>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  oem: MyString
+  model: MyString
+  transmission: MyString
+  drive_type: MyString
+  engine_size: MyString
+  seat_material: MyString
+  performance: 1
+  gearbox: 1
+  body_style: MyString
+  owner: MyString
+  telephone: MyString
+  image_url: MyString
+
+two:
+  oem: MyString
+  model: MyString
+  transmission: MyString
+  drive_type: MyString
+  engine_size: MyString
+  seat_material: MyString
+  performance: 1
+  gearbox: 1
+  body_style: MyString
+  owner: MyString
+  telephone: MyString
+  image_url: MyString
