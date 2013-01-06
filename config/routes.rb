@@ -1,4 +1,6 @@
 Ccar::Application.routes.draw do
+  resources :users
+
   resources :ocars
 
   resources :ncars
