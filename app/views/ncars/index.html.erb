@@ -1,0 +1,39 @@
+<h1>Listing ncars</h1>
+
+<table>
+  <tr>
+    <th>Oem</th>
+    <th>Model</th>
+    <th>Transmission</th>
+    <th>Drive type</th>
+    <th>Engine size</th>
+    <th>Seat material</th>
+    <th>Performance</th>
+    <th>Gearbox</th>
+    <th>Body style</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ncars.each do |ncar| %>
+  <tr>
+    <td><%= ncar.oem %></td>
+    <td><%= ncar.model %></td>
+    <td><%= ncar.transmission %></td>
+    <td><%= ncar.drive_type %></td>
+    <td><%= ncar.engine_size %></td>
+    <td><%= ncar.seat_material %></td>
+    <td><%= ncar.performance %></td>
+    <td><%= ncar.gearbox %></td>
+    <td><%= ncar.body_style %></td>
+    <td><%= link_to 'Show', ncar %></td>
+    <td><%= link_to 'Edit', edit_ncar_path(ncar) %></td>
+    <td><%= link_to 'Destroy', ncar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ncar', new_ncar_path %>
