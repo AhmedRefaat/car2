@@ -1,4 +1,5 @@
 class OcarsController < ApplicationController
+  skip_before_filter :authorize, only: [:index, :show]
   # GET /ocars
   # GET /ocars.json
   def index

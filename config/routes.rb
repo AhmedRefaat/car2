@@ -1,4 +1,17 @@
 Ccar::Application.routes.draw do
+ get 'admin' => 'admin#index'
+controller :sessions do
+get 'login' => :new
+post 'login' => :create
+delete 'logout' => :destroy
+end
+
+  #get "sessions/new"
+
+  #get "sessions/create"
+
+  #get "sessions/destroy"
+
   resources :users
 
   resources :ocars
@@ -61,4 +74,5 @@ Ccar::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+  root to: 'ncar#index', as: 'ncar'
 end

@@ -1,4 +1,5 @@
 class NcarsController < ApplicationController
+  skip_before_filter :authorize, only: [:index, :show]
   # GET /ncars
   # GET /ncars.json
   def index
@@ -12,6 +13,7 @@ class NcarsController < ApplicationController
 
   # GET /ncars/1
   # GET /ncars/1.json
+  
   def show
     @ncar = Ncar.find(params[:id])
 

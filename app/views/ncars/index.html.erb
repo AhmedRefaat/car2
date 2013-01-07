@@ -27,9 +27,9 @@
     <td><%= ncar.performance %></td>
     <td><%= ncar.gearbox %></td>
     <td><%= ncar.body_style %></td>
-    <td><%= link_to 'Show', ncar %></td>
+    <td><%= link_to 'Show', ncars_path %></td>
     <td><%= link_to 'Edit', edit_ncar_path(ncar) %></td>
-    <td><%= link_to 'Destroy', ncar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', ncars_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
