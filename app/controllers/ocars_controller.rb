@@ -36,6 +36,17 @@ class OcarsController < ApplicationController
   # GET /ocars/1/edit
   def edit
     @ocar = Ocar.find(params[:id])
+    @auth_user = User.find_by_name(@ocar.owner)
+    if @auth_user.nil?
+      format.html {render unather}
+    end
+    @online_user = User.find(session[:user_id])
+    if @online_user != @auth_user
+      respond_to do |format|
+        format.html {redirect_to ocars_url, notice: 'Sorry you can not edit in this entry.' }
+        format.json { head :no_content }
+      end
+    end
   end
 
   # POST /ocars

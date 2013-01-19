@@ -1,6 +1,7 @@
 <h1>Editing ocar</h1>
-
+<!--%if @ocar.owner == session[user.name]%-->
 <%= render 'form' %>
+
 
 <%= link_to 'Show', @ocar %> |
 <%= link_to 'Back', ocars_path %>
