@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ckind: MyString
+  cmodel: MyString
+  price: 1
+  find: MyString
+  show: MyString
+
+two:
+  ckind: MyString
+  cmodel: MyString
+  price: 1
+  find: MyString
+  show: MyString

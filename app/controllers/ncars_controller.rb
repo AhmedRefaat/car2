@@ -5,6 +5,7 @@ class NcarsController < ApplicationController
   def index
     @ncars = Ncar.all
 
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @ncars }
@@ -42,17 +43,30 @@ class NcarsController < ApplicationController
   # POST /ncars
   # POST /ncars.json
   def create
-    @ncar = Ncar.new(params[:ncar])
+     @ncar = Ocar.new(params[:ncar])
 
     respond_to do |format|
       if @ncar.save
-        format.html { redirect_to @ncar, notice: 'Ncar was successfully created.' }
+        format.html { redirect_to @ncar, notice: 'Ocar was successfully created.' }
         format.json { render json: @ncar, status: :created, location: @ncar }
       else
         format.html { render action: "new" }
         format.json { render json: @ncar.errors, status: :unprocessable_entity }
       end
     end
+      #p params[:ncar]
+      #p ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
+  
+    #@ncar = Ncar.new(params[:ncar])
+    #respond_to do |format|
+     # if @ncar.save
+      #  format.html { redirect_to @ncar, notice: 'Ncar was successfully created.' }
+       # format.json { render json: @ncar, status: :created, location: @ncar }
+      #else
+       # format.html { render action: "new" }
+        #format.json { render json: @ncar.errors, status: :unprocessable_entity }
+      #end
+    #end
   end
 
   # PUT /ncars/1

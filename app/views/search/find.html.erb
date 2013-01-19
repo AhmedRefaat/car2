@@ -1,0 +1,6 @@
+<h1>Search For you future car</h1>
+<%= form_tag search_show_path, :method => :get do %>
+<%= label_tag :Car_Kind %>
+<%= select_tag("selected[]" , options_for_select(@oems),  :prompt => "You have to select")%>
+<%= submit_tag "Find cars"%>
+<%end%>

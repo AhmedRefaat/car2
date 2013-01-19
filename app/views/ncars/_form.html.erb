@@ -1,7 +1,7 @@
-<%= form_for(@ncar) do |f| %>
+<%= form_for @ncar, :html => {:multipart => true } do |f| %>
   <% if @ncar.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@ncar.errors.count, "error") %> prohibited this ncar from being saved:</h2>
+      <h2><%= pluralize(@ncar.errors.count, "error") %> prohibited this ocar from being saved:</h2>
 
       <ul>
       <% @ncar.errors.full_messages.each do |msg| %>
@@ -10,7 +10,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= f.label :oem %><br />
     <%= f.text_field :oem %>
@@ -46,6 +45,9 @@
   <div class="field">
     <%= f.label :body_style %><br />
     <%= f.text_field :body_style %>
+  </div>
+    <div>
+  	<%= f.file_field :photo%>
   </div>
   <div class="actions">
     <%= f.submit %>

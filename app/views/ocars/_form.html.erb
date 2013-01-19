@@ -1,4 +1,4 @@
-<%= form_for(@ocar) do |f| %>
+<%= form_for @ocar, :html => {:multipart => true } do |f| %>
   <% if @ocar.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@ocar.errors.count, "error") %> prohibited this ocar from being saved:</h2>
@@ -58,6 +58,9 @@
   <div class="field">
     <%= f.label :image_url %><br />
     <%= f.text_field :image_url %>
+  </div>
+  <div>
+  	<%= f.file_field :photo%>
   </div>
   <div class="actions">
     <%= f.submit %>

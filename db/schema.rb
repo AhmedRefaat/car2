@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130106220344) do
+ActiveRecord::Schema.define(:version => 20130119211937) do
 
   create_table "ncars", :force => true do |t|
     t.string   "oem"
@@ -23,8 +23,12 @@ ActiveRecord::Schema.define(:version => 20130106220344) do
     t.integer  "performance"
     t.integer  "gearbox"
     t.string   "body_style"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "ocars", :force => true do |t|
@@ -40,8 +44,22 @@ ActiveRecord::Schema.define(:version => 20130106220344) do
     t.string   "owner"
     t.string   "telephone"
     t.string   "image_url"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  create_table "searches", :force => true do |t|
+    t.string   "ckind"
+    t.string   "cmodel"
+    t.integer  "price"
+    t.string   "find"
+    t.string   "show"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

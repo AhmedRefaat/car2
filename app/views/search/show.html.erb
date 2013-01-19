@@ -1,0 +1,46 @@
+<h1> Search Result </h1>
+
+<%= form_tag search_show_path, :method => :get, do %>
+<%= label_tag :Filter_for_avialable_Models%>
+<%= select_tag("car_model[]", options_for_select(@cmodel), :prompt => "All")%>
+<%= submit_tag "Get models" %>
+<%end%>
+
+<table>
+  <tr>
+    <th>Oem</th>
+    <th>Model</th>
+    <th>Transmission</th>
+    <th>Drive type</th>
+    <th>Engine size</th>
+    <th>Seat material</th>
+    <th>Performance</th>
+    <th>Gearbox</th>
+    <th>Body style</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ocars.each do |ncar| %>
+  <tr>
+  	<div class = "entry">
+    <td><%= ncar.oem %></td>
+    <td><%= ncar.cmodel %></td>
+    <td><%= ncar.transmission %></td>
+    <td><%= ncar.drive_type %></td>
+    <td><%= ncar.engine_size %></td>
+    <td><%= ncar.seat_material %></td>
+    <td><%= ncar.performance %></td>
+    <td><%= ncar.gearbox %></td>
+    <td><%= ncar.body_style %></td>
+    <td><%= link_to 'Show', ncars_path %></td>
+    <td><%= link_to 'Edit', edit_ncar_path(ncar) %></td>
+    <td><%= link_to 'Destroy', ncars_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </div>
+  </tr>
+<% end %>
+</table>
+
+
+

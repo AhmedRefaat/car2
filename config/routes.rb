@@ -1,4 +1,8 @@
 Ccar::Application.routes.draw do
+  get "search/find"
+
+  get "search/show"
+
  get 'admin' => 'admin#index'
 controller :sessions do
 get 'login' => :new
